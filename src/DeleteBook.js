@@ -4,7 +4,7 @@ import axios from 'axios'
 const DeleteBook = (props) => {
 
     function deleteBook(){
-        axios.delete(`http://localhost:3000/books/${props.bookId}`)
+        axios.delete(`https://gentle-coast-98929.herokuapp.com/books/${props.bookId}`)
             .then(props.onDelete)
         // console.log(bookId.bookId)
     }

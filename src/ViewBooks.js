@@ -11,7 +11,7 @@ const ViewBooks = () => {
 
     // This code to run upon mounting so uses useState hook
     useEffect(() => {
-        axios.get(`http://localhost:3000/books/`)
+        axios.get(`https://gentle-coast-98929.herokuapp.com/books/`)
             .then (res => {
                 setBooks(res.data)
                 setIsLoading(false)                             // No longer loading

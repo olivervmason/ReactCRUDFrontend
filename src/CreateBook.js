@@ -14,7 +14,7 @@ const CreateBook = () => {
         // console.log("CreateBook method activated")
         
         if(bookTitle && bookAuthor && bookGenre){
-            axios.post(`http://localhost:3000/books`, {
+            axios.post(`https://gentle-coast-98929.herokuapp.com/books`, {
                 book: {
                     title: bookTitle,
                     author: bookAuthor,

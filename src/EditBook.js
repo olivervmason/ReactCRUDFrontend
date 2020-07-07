@@ -11,7 +11,7 @@ const EditBook = (props) => {
     const [errorMessage, setErrorMessage] = useState("")
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/books/${props.bookId}`)
+        axios.get(`https://gentle-coast-98929.herokuapp.com/books/${props.bookId}`)
             .then(res => {
                 setBookTitle(res.data.title)
                 setBookAuthor(res.data.author)
@@ -24,7 +24,7 @@ const EditBook = (props) => {
 
     function editBook (){
         if(bookTitle && bookAuthor && bookGenre){
-            axios.put(`http://localhost:3000/books/${props.bookId}`, {
+            axios.put(`https://gentle-coast-98929.herokuapp.com/books/${props.bookId}`, {
                 book: {
                     title: bookTitle,
                     author: bookAuthor,
